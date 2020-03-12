@@ -1,0 +1,71 @@
+<h1>Problem with dropdown in primeNg</h1>
+
+<h2>click in dropdown and window stay behind box</h2>
+<form [formGroup]="form" name="form">
+	<div style="background: #e1f5ff;">
+		<button  *ngIf="cityFormArray.controls.length === 0" pButton type="button" label="Add" (click)="addNovo()"
+                    class="ui-button-primary ml-8"></button>
+		<div class="ui-g ui-fuild" formArrayName="cities" class="displayFlex">
+			<div *ngFor="let city of cityFormArray.controls; let i = index">
+				<div [formGroup]="city">
+					<div class="ui-g-12 ui-md-12">
+						<div class="ui-g-12 ui-md-5 ui-sm-5">
+							<label for="">City 1</label><br>
+							<p-dropdown formControlName="cityOne" [options]="cities2" optionLabel="name"></p-dropdown>
+						</div>
+						<div class="ui-g-12 ui-md-5 ui-sm-5">
+							<label for="">City 2</label><br>
+							<p-dropdown formControlName="cityTwo" [options]="cities2" optionLabel="name"></p-dropdown>
+						</div>
+						<div class="ui-g-12 ui-md-2 ui-sm-2">
+							<button  pButton type="button" label="remove" (click)="remove(i)"
+                    class="ui-button-secondary ml-8"></button>
+							<button  pButton type="button" label="Add" (click)="addNovo()"
+                    class="ui-button-primary ml-8"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+
+<h2>Example 2 with appendTo='body', after add 4x and click in dropdown, when run scroll a window stay fixed</h2>
+  <div style="background: #e1f5ff;">
+		<button  *ngIf="cityWithAppendFormArray.controls.length === 0" pButton type="button" label="Add" (click)="addNovo()"
+                    class="ui-button-primary ml-8"></button>
+		<div class="ui-g ui-fuild" formArrayName="citiesWithAppend" class="displayFlex">
+			<div *ngFor="let city of cityWithAppendFormArray.controls; let i = index">
+				<div [formGroup]="city">
+					<div class="ui-g-12 ui-md-12">
+						<div class="ui-g-12 ui-md-5 ui-sm-5">
+							<label for="">City 1</label><br>
+							<p-dropdown appendTo="body" formControlName="cityOne" [options]="cities2" optionLabel="name"></p-dropdown>
+						</div>
+						<div class="ui-g-12 ui-md-5 ui-sm-5">
+							<label for="">City 2</label><br>
+							<p-dropdown appendTo="body" formControlName="cityTwo" [options]="cities2" optionLabel="name"></p-dropdown>
+						</div>
+						<div class="ui-g-12 ui-md-2 ui-sm-2">
+							<button  pButton type="button" label="remove" (click)="remove2(i)"
+                    class="ui-button-secondary ml-8"></button>
+							<button  pButton type="button" label="Add" (click)="addNovo2()"
+                    class="ui-button-primary ml-8"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>

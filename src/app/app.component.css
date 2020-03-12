@@ -1,0 +1,6 @@
+.displayFlex {
+  padding: 10px 30px;
+  overflow-y: auto;
+  max-height: 300px; 
+  flex-direction: column-reverse;
+}
