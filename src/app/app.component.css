@@ -2,5 +2,6 @@
   padding: 10px 30px;
   overflow-y: auto;
   max-height: 300px; 
+  display: flex;
   flex-direction: column-reverse;
 }

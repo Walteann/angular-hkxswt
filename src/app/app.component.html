@@ -20,7 +20,7 @@
 						<div class="ui-g-12 ui-md-2 ui-sm-2">
 							<button  pButton type="button" label="remove" (click)="remove(i)"
                     class="ui-button-secondary ml-8"></button>
-							<button  pButton type="button" label="Add" (click)="addNovo()"
+							<button  *ngIf="i + 1 == cityFormArray.controls.length" pButton type="button" label="Add" (click)="addNovo()"
                     class="ui-button-primary ml-8"></button>
 						</div>
 					</div>
